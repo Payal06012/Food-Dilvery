@@ -11,7 +11,7 @@ const StoreContextProvider = (props)=>{
     const [cartItems , setCartItems] = useState({});
 
     // for login and registeration
-    const url= "http://localhost:4000"
+    const url= "https://food-dilvery-app.onrender.com';
     const [token , setToken] = useState("");
 
     const [food_list , setFoodList] = useState([]);
