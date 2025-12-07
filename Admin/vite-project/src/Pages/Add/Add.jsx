@@ -24,7 +24,7 @@ const Add = () => {
 const onSubmitHandler = async(event)=>{
 
 event.preventDefault();
-  const url ="https://food-dilvery-app.onrender.com/";
+  const url ="https://food-dilvery-app.onrender.com";
 
 const formData = new FormData();
 formData.append("name" , data.name);
