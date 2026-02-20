@@ -1,6 +1,6 @@
 import React from 'react'
 import { assets } from '../../assets/admin_assets/assets'
-import "./navBar.css";
+import "./NavBar.css";
 
 const NavBar = () => {
   return (
