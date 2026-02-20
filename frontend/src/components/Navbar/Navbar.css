@@ -102,3 +102,75 @@
       list-style: none;
 
 }
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .navbar-right {
+    gap: 25px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+}
+
+.hamburger {
+  display: none;
+  width: 25px;
+  cursor: pointer;
+}
+
+
+
+
+
+@media (max-width: 700px) {
+
+  .navbar {
+    position: relative;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+
+  .navbar button {
+    font-size: 16px;
+    padding: 6px 14px;
+  }
+
+  .hamburger {
+    display: block;
+      width: 25px;
+  cursor: pointer;
+  }
+}

@@ -8,6 +8,9 @@ import userRouter from "./Routes/userRoute.js";
 import userModel from "./models/userModel.js";
 import 'dotenv/config'    // enable to use env variabel
 import cartRouter from "./Routes/cartRoute.js";
+import orderRoute from "./Routes/orderRoutes.js";
+import Order from "./models/orderModel.js";
+import adminRouter from "./Routes/adminRoute.js";
 
 //app config
 
@@ -35,6 +38,9 @@ app.use("/api/food" , foodRouter);
 app.use("/images" , express.static('upload'));
 app.use("/api/user" , userRouter);
 app.use("/api/cart" , cartRouter);
+app.use("/api/order", orderRoute);
+app.use("/api/admin" , adminRouter);
+
 
 
 app.get("/" , (req , res)=>{
@@ -44,3 +50,4 @@ res.send("API working");
 app.listen(port, ()=>{
     console.log(`server is running at http://localhost:${port}}`)
 })
+ 

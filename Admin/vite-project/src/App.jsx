@@ -20,7 +20,7 @@ const App = () => {
         <SideBar/>
 
 <Routes>
-<Route  path ="/add" element ={<Add/>} /> 
+<Route  path ="/" element ={<Add/>} /> 
 <Route  path ="/list" element ={<List/>} /> 
 <Route  path ="/order" element ={<Order/>} /> 
 

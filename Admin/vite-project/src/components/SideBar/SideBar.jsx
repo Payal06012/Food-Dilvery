@@ -10,7 +10,7 @@ const SideBar = () => {
     <div className ="sideBar">
 
         <div className="sideBarOptions">
-            <NavLink to ="/add" className="sideBarOption">
+            <NavLink to ="/" className="sideBarOption">
                 <img src={assets.add_icon} alt="" />
                 <p>Add Item</p>
             </NavLink>

@@ -86,7 +86,6 @@ const token = createToken(user._id);
        res.json({success : true , token})      //sending object
 
 
-
 }
 
 

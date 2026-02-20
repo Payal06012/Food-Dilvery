@@ -16,7 +16,16 @@ const StoreContextProvider = (props)=>{
 
     const [food_list , setFoodList] = useState([]);
 
-    const addToCart =(itemId)=>{
+    const addToCart =async(itemId)=>{
+
+        if (!token) return;
+
+    await axios.post(
+      url + "/api/cart/add",
+      { itemId },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+
         if(!cartItems[itemId]){
             setCartItems((prev)=>({...prev , [itemId] :1}));
         }
@@ -26,9 +35,24 @@ const StoreContextProvider = (props)=>{
 
     }
 
-    const removeFromCart =(itemId)=>{
+    const removeFromCart = async(itemId)=>{
+
+            await axios.post(
+      url + "/api/cart/remove",
+      { itemId },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+
          setCartItems((prev)=>({...prev , [itemId] : prev[itemId] -1}));
     }
+
+      const fetchCart = async () => {
+    const response = await axios.get(
+      url + "/api/cart/get",
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+    setCartItems(response.data.cartData);
+  };
 
     // useEffect(()=>{
     // console.log(cartItems);
@@ -70,7 +94,7 @@ const StoreContextProvider = (props)=>{
      loadData();
 
    
-     })
+     },[])
 
  
     const contextValue ={

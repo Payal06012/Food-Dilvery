@@ -8,6 +8,8 @@ const Navbar = ({setShowLogin}) => {
 
     const [menu , setMenu] = useState("Home"); // set state varialiable
     const {totalCartAmount , token , setToken} = useContext(StoreContext);
+    const [showMenu, setShowMenu] = useState(false);
+
   
    const Navigate = useNavigate();
 
@@ -21,7 +23,8 @@ const Navbar = ({setShowLogin}) => {
     <div className ='navbar'>
         
         <Link to='/'><img src={assets.logo} alt="" className="logo" /></Link>
-        <ul className="navbar-menu">
+        <ul className={`navbar-menu ${showMenu ? "show" : ""}`}>
+
             < Link to ='/' onClick={() =>setMenu("Home")} className = {menu === "Home" ? "active" : ""}>Home</ Link>
             < a href ="#exploreMenu" onClick={() =>setMenu("Menu")} className = {menu === "Menu" ? "active ": ""}>Menu</ a >
             < a href ="#App-download" onClick={() =>setMenu("Mobile-app")} className = {menu ===  "Mobile-app" ? "active": ""}>Mobile-app</ a  >
@@ -47,10 +50,19 @@ const Navbar = ({setShowLogin}) => {
       <li  onClick={logout}><img src={assets.logout_icon} /> <p>Log out</p></li>
 
 
+
   </ul>
+
 </div> 
 
       }
+
+      {/* <img
+  src={assets.menu_icon}
+  alt=""
+  className="hamburger"
+  onClick={() => setShowMenu(!showMenu)}
+/> */}
 
 
     </div>

@@ -65,7 +65,7 @@ else{
   {current_state === "Log in" ? <></> :   <input type="text" name='name'  onChange={onChangeHandler} value = {data.name} placeholder='Your Name' required  />}
   
   <input name = 'email' onChange={onChangeHandler} value = {data.email} type="email" placeholder='Your E mail'  required/>
-   <input  name = 'password' onChange={onChangeHandler} value = {data.password} type="password" placeholder='Set Password'  required/>
+   <input  name = 'password' onChange={onChangeHandler} value = {data.password} type="password" placeholder='Password'  required/>
 
 </div>
 <button type='submit'>{current_state === "Sign up" ? "Create Account" : "Log in" }</button>

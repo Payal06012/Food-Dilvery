@@ -7,8 +7,9 @@
   box-sizing : border-box ;
   /* font-family: Outfit ; */
 
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, Poppins ,'Trebuchet MS', sans-serif;
-  
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, Poppins ,'Trebuchet MS', sans-serif; */
+  font-size: 20px;;
+
   scroll-behavior: smooth;
 }
 
